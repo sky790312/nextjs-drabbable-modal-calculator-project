@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CounterSection component matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      抽獎時間
+    </h1>
+    <form>
+      <input
+        class="sc-bdfBwQ brYTGD"
+        placeholder="請輸入倒數時間(數字)"
+        type="text"
+        value=""
+      />
+      分鐘
+      <button
+        class="sc-gsTCUz enQJdt"
+      >
+        設定
+      </button>
+    </form>
+    <div
+      class="sc-dlfnbm hWNSxv"
+    >
+      00:00
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="GlobalStyles__Container-sc-1lan98s-1 sc-pFZIQ kNXjQR kaEgKM"
+  >
+    <div>
+      <h1>
+        抽獎時間
+      </h1>
+      <form>
+        <input
+          class="sc-bdfBwQ brYTGD"
+          placeholder="請輸入倒數時間(數字)"
+          type="text"
+          value=""
+        />
+        分鐘
+        <button
+          class="sc-gsTCUz enQJdt"
+        >
+          設定
+        </button>
+      </form>
+      <div
+        class="sc-dlfnbm hWNSxv"
+      >
+        00:00
+      </div>
+    </div>
+    <div>
+      <h1>
+        參與抽獎名單
+      </h1>
+      <div
+        class="sc-iBPRYJ jraeKF"
+      >
+        <div
+          class="sc-hKgILt fpqlYp"
+        >
+          <div
+            class="sc-eCssSg DGqSg"
+          >
+            <div
+              class="sc-gKsewC enHkhf"
+              name="Kevin"
+            />
+          </div>
+          <div
+            class="sc-jSgupP iHAMlZ"
+          >
+            1. Kevin
+          </div>
+        </div>
+        <div
+          class="sc-hKgILt fpqlYp"
+        >
+          <div
+            class="sc-eCssSg DGqSg"
+          >
+            <div
+              class="sc-gKsewC iqPNeF"
+              name="Steve"
+            />
+          </div>
+          <div
+            class="sc-jSgupP iHAMlZ"
+          >
+            2. Steve
+          </div>
+        </div>
+        <div
+          class="sc-hKgILt fpqlYp"
+        >
+          <div
+            class="sc-eCssSg DGqSg"
+          >
+            <div
+              class="sc-gKsewC hyBclv"
+              name="Calvin"
+            />
+          </div>
+          <div
+            class="sc-jSgupP iHAMlZ"
+          >
+            3. Calvin
+          </div>
+        </div>
+        <div
+          class="sc-hKgILt fpqlYp"
+        >
+          <div
+            class="sc-eCssSg DGqSg"
+          >
+            <div
+              class="sc-gKsewC kwmhJH"
+              name="Diana"
+            />
+          </div>
+          <div
+            class="sc-jSgupP iHAMlZ"
+          >
+            4. Diana
+          </div>
+        </div>
+        <div
+          class="sc-hKgILt fpqlYp"
+        >
+          <div
+            class="sc-eCssSg DGqSg"
+          >
+            <div
+              class="sc-gKsewC cIVCVI"
+              name="Joe"
+            />
+          </div>
+          <div
+            class="sc-jSgupP iHAMlZ"
+          >
+            5. Joe
+          </div>
+        </div>
+        <div
+          class="sc-hKgILt fpqlYp"
+        >
+          <div
+            class="sc-eCssSg DGqSg"
+          >
+            <div
+              class="sc-gKsewC kyMgcf"
+              name="Jack"
+            />
+          </div>
+          <div
+            class="sc-jSgupP iHAMlZ"
+          >
+            6. Jack
+          </div>
+        </div>
+        <div
+          class="sc-hKgILt fpqlYp"
+        >
+          <div
+            class="sc-eCssSg DGqSg"
+          >
+            <div
+              class="sc-gKsewC gWGdxi"
+              name="Ray"
+            />
+          </div>
+          <div
+            class="sc-jSgupP iHAMlZ"
+          >
+            7. Ray
+          </div>
+        </div>
+        <div
+          class="sc-hKgILt fpqlYp"
+        >
+          <div
+            class="sc-eCssSg DGqSg"
+          >
+            <div
+              class="sc-gKsewC fpfiqK"
+              name="Allen"
+            />
+          </div>
+          <div
+            class="sc-jSgupP iHAMlZ"
+          >
+            8. Allen
+          </div>
+        </div>
+        <div
+          class="sc-hKgILt fpqlYp"
+        >
+          <div
+            class="sc-eCssSg DGqSg"
+          >
+            <div
+              class="sc-gKsewC gIeqEM"
+              name="Zoe"
+            />
+          </div>
+          <div
+            class="sc-jSgupP iHAMlZ"
+          >
+            9. Zoe
+          </div>
+        </div>
+        <div
+          class="sc-hKgILt fpqlYp"
+        >
+          <div
+            class="sc-eCssSg DGqSg"
+          >
+            <div
+              class="sc-gKsewC gctTvk"
+              name="James"
+            />
+          </div>
+          <div
+            class="sc-jSgupP iHAMlZ"
+          >
+            10. James
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

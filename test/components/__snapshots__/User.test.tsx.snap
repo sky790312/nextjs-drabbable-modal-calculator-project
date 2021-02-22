@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdfBwQ fckRnc"
+  >
+    <div
+      class="sc-gsTCUz dpEyqO"
+    >
+      <div
+        class="sc-hKgILt eCVQLM"
+        name="Kevin"
+      />
+    </div>
+    <div
+      class="sc-dlfnbm lgaWeB"
+    >
+      1. Kevin
+    </div>
+  </div>
+</DocumentFragment>
+`;
