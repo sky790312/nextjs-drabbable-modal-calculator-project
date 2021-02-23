@@ -3,7 +3,7 @@ import Head from 'next/head'
 import styled from 'styled-components/'
 import { Container } from '@/GlobalStyles'
 import { Modal } from '@/components/Modal'
-import Panel from '@/components/Panel'
+import { CalculateSection } from '@/components/CalculateSection'
 
 export const Home = React.memo(
   (): JSX.Element => {
@@ -22,9 +22,9 @@ export const Home = React.memo(
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <MainContainer>
-          qqq
-          <button onClick={() => setIsModalShow(true)}>ss</button>
+          <button onClick={() => setIsModalShow(true)}>open</button>
           <Modal {...modalConfig}>
+            <CalculateSection />
           </Modal>
         </MainContainer>
       </>

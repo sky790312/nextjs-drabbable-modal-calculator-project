@@ -5,7 +5,7 @@ export const FlexCenterContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
 `
 
 export const Container = styled.div`
@@ -22,13 +22,20 @@ export const theme = {
   colors: {
     white: '#fff',
     black: '#000',
-    gray: '#929292',
-    blue: '#1434d8',
-    lightBlue: '#099bdd',
+    gray: '#afafaf',
+    darkGray: '#333',
+    blue: '#3091fd',
+    darkBlue: '#0b0e1c',
+    lightBlue: '#84baff',
   },
 }
 
 export const GlobalStyles = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    line-height: 1.4;
+  }
+
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -36,9 +43,5 @@ export const GlobalStyles = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1 {
-    font-size: 3rem;
   }
 `

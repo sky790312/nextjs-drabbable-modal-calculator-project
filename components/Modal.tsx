@@ -89,8 +89,6 @@ const StyledModal = styled.div`
 const StyledModalInner = styled.div`
   position: absolute;
   cursor: grab;
-  padding: 30px 30px;
-  width: 580px;
   min-height: 200px;
   background-color: #fff;
   border-radius: 8px;
