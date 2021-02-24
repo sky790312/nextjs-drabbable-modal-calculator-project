@@ -1,15 +1,14 @@
 import React from 'react'
 import styled from 'styled-components/'
-import { FlexCenterContainer } from '@/GlobalStyles'
 import { FunctionSection } from '@/components/FunctionSection'
 import { NumberSection } from '@/components/NumberSection'
 import { OperationSection } from '@/components/OperationSection'
-
+import { ResultSection } from '@/components/ResultSection'
 
 export const CalculateSection: React.FC = () => {
   return (
     <CalculateSectionContainer>
-      <ResultSection>0</ResultSection>
+      <ResultSection />
       <ManipulateSection>
         <div>
           <FunctionSection />
@@ -27,18 +26,6 @@ const CalculateSectionContainer = styled.div`
   width: 480px;
   height: 650px;
   border-radius: 5px;
-`
-
-const ResultSection = styled.div`
-  height: 150px;
-  text-align: right;
-  color: ${({ theme }) => theme.colors.white};
-  padding: 60px 20px 0;
-  font-size: 64px;
-
-  // span {
-  //   font-size: 48px;
-  // }
 `
 
 const ManipulateSection = styled.div`

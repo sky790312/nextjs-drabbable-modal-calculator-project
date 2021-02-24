@@ -1,46 +1,60 @@
 import React from 'react'
 import styled from 'styled-components/'
 import { FlexCenterContainer } from '@/GlobalStyles'
+import { Dispatch } from 'redux'
+import { calculatorActions, initialDisplayValue } from '@/store/state.calculator'
+import { useSelector, shallowEqual, useDispatch } from 'react-redux'
+import { RootState } from '@/store/index'
 
-export const NumberSection: React.FC = () => {
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+export const NumberSection: React.FC = React.memo(() => {
+  const displayValue = useSelector(
+    (state: RootState) => state.calculator.displayValue,
+    shallowEqual
+  )
+  const isWaitingOperand = useSelector(
+    (state: RootState) => state.calculator.isWaitingOperand,
+    shallowEqual
+  )
+
+  const dispatch: Dispatch = useDispatch()
+  const { setDisplayValue } = calculatorActions
+
+  const handleNumber = (num: number) => {
+    const numString = num.toString()
+    if (isWaitingOperand) {
+      console.log('in isWaitingOperand')
+    } else {
+      const newDisplayValue = displayValue === initialDisplayValue ? numString : `${displayValue}${numString}`
+      dispatch(setDisplayValue(newDisplayValue))
+    }
+  }
+
+  const handleDot = () => {
+    if ((/\./).test(displayValue)) {
+      return
+    }
+
+    dispatch(setDisplayValue(`${displayValue}.`))
+  }
+
   return (
     <NumberSectionContainer>
       <FlexCenterContainer className='x2'>
-        <Button className='x2'>0</Button>
+        <Button className='x2' onClick={() => handleNumber(0)}>0</Button>
       </FlexCenterContainer>
       <FlexCenterContainer>
-        <Button>●</Button>
+        <Button onClick={() => handleDot()}>●</Button>
       </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>1</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>2</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>3</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>4</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>5</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>6</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>7</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>8</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>9</Button>
-      </FlexCenterContainer>
+      {numbers.map(number => (
+        <FlexCenterContainer key={number}>
+          <Button onClick={() => handleNumber(number)}>{number}</Button>
+        </FlexCenterContainer>
+      ))}
     </NumberSectionContainer>
   )
-}
+})
 
 const NumberSectionContainer = styled.div`
   display: flex;
@@ -69,7 +83,7 @@ const Button = styled.button`
   height: 80px;
 
   &.x2 {
-    width: 80%;
+    width: 100%;
     border-radius: 40px;
   }
 `

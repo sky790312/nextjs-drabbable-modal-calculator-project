@@ -1,23 +1,24 @@
 import React from 'react'
+import styled from 'styled-components/'
 import { useSelector, shallowEqual } from 'react-redux'
 import { RootState } from '@/store/index'
-import { User } from '@/components/User'
+import { addCommasString } from '@/utils'
 
 export const ResultSection: React.FC = () => {
-  const winnerUser = useSelector(
-    (state: RootState) => state.users.winnerUser,
+  const displayValue = useSelector(
+    (state: RootState) => state.calculator.displayValue,
     shallowEqual
   )
 
   return (
-    <div>
-      <h1>抽獎結果</h1>
-      {winnerUser && (
-        <div>
-          <User user={winnerUser} />
-          <h3>恭喜！！ 🎉🎉🎉</h3>
-        </div>
-      )}
-    </div>
+    <ResultSectionContainer>{addCommasString(displayValue)}</ResultSectionContainer>
   )
 }
+
+const ResultSectionContainer = styled.div`
+  height: 150px;
+  text-align: right;
+  color: ${({ theme }) => theme.colors.white};
+  padding: 60px 20px 0;
+  font-size: 64px;
+`
