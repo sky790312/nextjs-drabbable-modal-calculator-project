@@ -1,14 +1,10 @@
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
-import { counterReducer } from '@/store/state.counter'
-import { usersReducer } from '@/store/state.users'
 import { calculatorReducer } from '@/store/state.calculator'
 import { useMemo } from 'react'
 
 const rootReducer = combineReducers({
-  users: usersReducer,
-  counter: counterReducer,
   calculator: calculatorReducer,
 })
 

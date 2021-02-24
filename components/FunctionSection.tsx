@@ -1,12 +1,22 @@
 import React from 'react'
 import styled from 'styled-components/'
 import { FlexCenterContainer } from '@/GlobalStyles'
+import { Dispatch } from 'redux'
+import { calculatorActions } from '@/store/state.calculator'
+import { useDispatch } from 'react-redux'
 
 export const FunctionSection: React.FC = () => {
+  const dispatch: Dispatch = useDispatch()
+  const { reset } = calculatorActions
+
+  const handleReset = () => {
+    dispatch(reset())
+  }
+
   return (
     <FunctionSectionContainer>
       <FlexCenterContainer>
-        <Button>AC</Button>
+        <Button onClick={handleReset}>AC</Button>
       </FlexCenterContainer>
       <FlexCenterContainer>
         <Button>+/-</Button>

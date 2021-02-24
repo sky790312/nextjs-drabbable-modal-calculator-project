@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import styled from 'styled-components/'
 import { Container } from '@/GlobalStyles'
 import { Modal } from '@/components/Modal'
 import { CalculateSection } from '@/components/CalculateSection'
@@ -21,25 +20,15 @@ export const Home = React.memo(
           <title>Create Next App</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <MainContainer>
+        <Container>
           <button onClick={() => setIsModalShow(true)}>open</button>
           <Modal {...modalConfig}>
             <CalculateSection />
           </Modal>
-        </MainContainer>
+        </Container>
       </>
     )
   }
 )
-
-const MainContainer = styled(Container)`
-  @media (min-width: 1140px) {
-    display: flex;
-
-    > div {
-      width: 50%;
-    }
-  }
-`
 
 export default Home

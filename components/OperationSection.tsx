@@ -2,24 +2,38 @@ import React from 'react'
 import styled from 'styled-components/'
 import { FlexCenterContainer } from '@/GlobalStyles'
 
+// const operations = [{
+//   name: 'division',
+//   text: '÷',
+//   value: '/',
+// }, {
+//     name: 'multiplication',
+//     text: 'x',
+//     value: '*',
+//   }, {
+//     name: 'subtraction',
+//     text: '-',
+//     value: '-',
+//   }, {
+//     name: 'addition',
+//     text: '+',
+//     value: '+',
+//   }, {
+//     name: 'equal',
+//     text: '=',
+//     value: '=',
+//   }]
+
+const operations = ['÷', 'x', '-', '+', '=']
+
 export const OperationSection: React.FC = () => {
   return (
     <OperationSectionContainer>
-      <FlexCenterContainer>
-        <Button>÷</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>×</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>-</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>+</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button>=</Button>
-      </FlexCenterContainer>
+      {operations.map(operation => (
+        <FlexCenterContainer key={operation}>
+          <Button>{operation}</Button>
+        </FlexCenterContainer>
+      ))}
     </OperationSectionContainer>
 
   )
