@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/'
 import { FlexCenterContainer } from '@/GlobalStyles'
 import { Dispatch } from 'redux'
-import { calculatorActions, initialDisplayValue } from '@/store/state.calculator'
+import { calculatorActions, initialState } from '@/store/state.calculator'
 import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import { RootState } from '@/store/index'
 
@@ -13,20 +13,21 @@ export const NumberSection: React.FC = React.memo(() => {
     (state: RootState) => state.calculator.displayValue,
     shallowEqual
   )
-  const isWaitingOperand = useSelector(
-    (state: RootState) => state.calculator.isWaitingOperand,
+  const operator = useSelector(
+    (state: RootState) => state.calculator.operator,
     shallowEqual
   )
 
   const dispatch: Dispatch = useDispatch()
-  const { setDisplayValue } = calculatorActions
+  const { setOperator, setDisplayValue } = calculatorActions
 
   const handleNumber = (num: number) => {
     const numString = num.toString()
-    if (isWaitingOperand) {
-      console.log('in isWaitingOperand')
+    if (operator) {
+      dispatch(setDisplayValue(numString))
+      dispatch(setOperator(''))
     } else {
-      const newDisplayValue = displayValue === initialDisplayValue ? numString : `${displayValue}${numString}`
+      const newDisplayValue = displayValue === initialState.displayValue ? numString : `${displayValue}${numString}`
       dispatch(setDisplayValue(newDisplayValue))
     }
   }

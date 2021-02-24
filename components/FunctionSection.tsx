@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/'
 import { FlexCenterContainer } from '@/GlobalStyles'
 import { Dispatch } from 'redux'
-import { calculatorActions, initialDisplayValue } from '@/store/state.calculator'
+import { calculatorActions, initialState } from '@/store/state.calculator'
 import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import { RootState } from '@/store/index'
 
@@ -24,7 +24,7 @@ export const FunctionSection: React.FC = React.memo(() => {
   }
 
   const handlePercent = () => {
-    if (displayValue === initialDisplayValue) {
+    if (displayValue === initialState.displayValue) {
       return
     }
 
