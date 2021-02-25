@@ -21,7 +21,6 @@ export const Button: React.FC<Props> = React.memo(({ children, size = defaultSty
 });
 
 const StyledButton = styled.button<StyledButtonProps>`
-  border-radius: 50%;
   border: none;
   outline: none;
   font-size: 24px;
@@ -50,13 +49,15 @@ const StyledButton = styled.button<StyledButtonProps>`
     switch (props.size) {
       case 'md':
         return `
-        width: 80px;
-        height: 80px;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
         `
       case 'block':
         return `
-        width: 100%;
-        height: 80px;
+          width: 100%;
+          height: 80px;
+          border-radius: 40px;
         `
     }
   }}

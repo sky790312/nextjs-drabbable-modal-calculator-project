@@ -21,4 +21,5 @@ const ResultSectionContainer = styled.div`
   color: ${({ theme }) => theme.colors.white};
   padding: 60px 20px 0;
   font-size: 64px;
+  overflow: auto;
 `

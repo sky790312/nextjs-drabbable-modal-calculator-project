@@ -7,8 +7,7 @@ import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import { RootState } from '@/store/index'
 import { initialState } from '@/store/state.calculator'
 import { Button } from '@/components/uiComponents/Button'
-
-const operations = ['÷', 'x', '-', '+', '=']
+import { OPERATORS } from '@/constants'
 
 export const OperationSection: React.FC = React.memo(() => {
   const [remainOperator, setRemainOperator] = useState<string>('');
@@ -56,7 +55,7 @@ export const OperationSection: React.FC = React.memo(() => {
 
   return (
     <OperationSectionContainer>
-      {operations.map(operation => (
+      {OPERATORS.map(operation => (
         <FlexCenterContainer key={operation}>
           <Button buttonStyle={'blue'} onClick={() => handleOperator(operation)}>{operation}</Button>
         </FlexCenterContainer>

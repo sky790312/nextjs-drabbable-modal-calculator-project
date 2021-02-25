@@ -6,6 +6,7 @@ import { calculatorActions, initialState } from '@/store/state.calculator'
 import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import { RootState } from '@/store/index'
 import { Button } from '@/components/uiComponents/Button'
+import { NUM_FUNCTIONS } from '@/constants'
 
 export const FunctionSection: React.FC = React.memo(() => {
   const dispatch: Dispatch = useDispatch()
@@ -14,6 +15,12 @@ export const FunctionSection: React.FC = React.memo(() => {
     (state: RootState) => state.calculator.displayValue,
     shallowEqual
   )
+
+  const numFunctionHandler = {
+    'AC': () => handleReset(),
+    '+/-': () => handleToggleSign(),
+    '%': () => handlePercent(),
+  }
 
   const handleReset = () => {
     dispatch(reset())
@@ -37,17 +44,12 @@ export const FunctionSection: React.FC = React.memo(() => {
 
   return (
     <FunctionSectionContainer>
-      <FlexCenterContainer>
-        <Button onClick={handleReset}>AC</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button onClick={handleToggleSign}>+/-</Button>
-      </FlexCenterContainer>
-      <FlexCenterContainer>
-        <Button onClick={handlePercent}>%</Button>
-      </FlexCenterContainer>
+      {NUM_FUNCTIONS.map(numFunction => (
+        <FlexCenterContainer key={numFunction}>
+          <Button onClick={() => numFunctionHandler[numFunction]()}>{numFunction}</Button>
+        </FlexCenterContainer>
+      ))}
     </FunctionSectionContainer>
-
   )
 })
 
