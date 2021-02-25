@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components/'
 
-interface Props extends StyledButtonProps {
+export interface Props extends StyledButtonProps {
   children: ReactNode
   onClick?: () => void
 }

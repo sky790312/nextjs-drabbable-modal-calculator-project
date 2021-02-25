@@ -4,7 +4,7 @@ import styled from 'styled-components/'
 
 const isClient = () => typeof window !== 'undefined'
 
-interface Props extends StyledModalProps {
+export interface Props extends StyledModalProps {
   children: ReactNode
   isShow: boolean
   closeModal: () => void
@@ -116,6 +116,7 @@ const StyledModalInner = styled.div<StyledModalProps>`
     switch (props.view) {
       case 'pc':
         return `
+          min-width: 100px;
           min-height: 200px;
           cursor: grab;
         `
