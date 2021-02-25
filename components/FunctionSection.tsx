@@ -5,6 +5,7 @@ import { Dispatch } from 'redux'
 import { calculatorActions, initialState } from '@/store/state.calculator'
 import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import { RootState } from '@/store/index'
+import { Button } from '@/components/uiComponents/Button'
 
 export const FunctionSection: React.FC = React.memo(() => {
   const dispatch: Dispatch = useDispatch()
@@ -57,23 +58,5 @@ const FunctionSectionContainer = styled.div`
   > div {
     width: 33.33%;
     padding: 10px;
-
-    > button {
-      color: ${({ theme }) => theme.colors.black};
-      background-color: ${({ theme }) => theme.colors.gray};
-      font-size: 24px;
-    }
-  }
-`
-
-const Button = styled.button`
-  border-radius: 50%;
-  border: none;
-  width: 80px;
-  height: 80px;
-
-  &.x2 {
-    width: 80%;
-    border-radius: 40px;
   }
 `

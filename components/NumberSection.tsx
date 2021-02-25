@@ -5,6 +5,7 @@ import { Dispatch } from 'redux'
 import { calculatorActions, initialState } from '@/store/state.calculator'
 import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import { RootState } from '@/store/index'
+import { Button } from '@/components/uiComponents/Button'
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -43,14 +44,14 @@ export const NumberSection: React.FC = React.memo(() => {
   return (
     <NumberSectionContainer>
       <FlexCenterContainer className='x2'>
-        <Button className='x2' onClick={() => handleNumber(0)}>0</Button>
+        <Button size={'block'} buttonStyle={'darkGray'} onClick={() => handleNumber(0)}>0</Button>
       </FlexCenterContainer>
       <FlexCenterContainer>
-        <Button onClick={() => handleDot()}>●</Button>
+        <Button buttonStyle={'darkGray'} onClick={() => handleDot()}>●</Button>
       </FlexCenterContainer>
       {numbers.map(number => (
         <FlexCenterContainer key={number}>
-          <Button onClick={() => handleNumber(number)}>{number}</Button>
+          <Button buttonStyle={'darkGray'} onClick={() => handleNumber(number)}>{number}</Button>
         </FlexCenterContainer>
       ))}
     </NumberSectionContainer>
@@ -60,6 +61,7 @@ export const NumberSection: React.FC = React.memo(() => {
 const NumberSectionContainer = styled.div`
   display: flex;
   flex-wrap: wrap-reverse;
+  font-size: 24px;
 
   > div {
     width: 33.33%;
@@ -68,23 +70,5 @@ const NumberSectionContainer = styled.div`
     &.x2 {
       width: 66.67%;
     }
-
-    > button {
-      color: ${({ theme }) => theme.colors.white};
-      background-color: ${({ theme }) => theme.colors.darkGray};
-      font-size: 24px;
-    }
-  }
-`
-
-const Button = styled.button`
-  border-radius: 50%;
-  border: none;
-  width: 80px;
-  height: 80px;
-
-  &.x2 {
-    width: 100%;
-    border-radius: 40px;
   }
 `
