@@ -82,7 +82,7 @@ const StyledModal = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: ${({ theme }) => theme.colors.lightGray};
   z-index: 99;
 `
 
@@ -90,7 +90,7 @@ const StyledModalInner = styled.div`
   position: absolute;
   cursor: grab;
   min-height: 200px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
 `
 
@@ -98,5 +98,6 @@ const CloseBtn = styled.div`
   position: absolute;
   right: 10px;
   top: 4px;
-  font-size: 21px;
+  font-size: 20px;
+  color: ${({ theme }) => theme.colors.color};
 `

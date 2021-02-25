@@ -51,7 +51,7 @@ export const NumberSection: React.FC = React.memo(() => {
         <FlexCenterContainer key={num} className={!num && 'x2'}>
           <Button
             buttonStyle={'darkGray'}
-            onClick={() => isNaN(Number(num)) ? numberHandler['dot']() : numberHandler['num'](num)}
+            onClick={() => isNaN(Number(num)) ? numberHandler['dot']() : numberHandler['num'](Number(num))}
             size={!num ? 'block' : 'md'}
           >
             {num}
