@@ -15,6 +15,7 @@ module.exports = {
     '@/components/(.*)': '<rootDir>/components/$1',
     '@/store/(.*)': '<rootDir>/store/$1',
     '@/test/(.*)': '<rootDir>/test/$1',
+    '@/constants': '<rootDir>/constants.ts',
     '@/utils': '<rootDir>/utils.ts',
     '@/GlobalStyles': '<rootDir>/GlobalStyles.ts',
   },

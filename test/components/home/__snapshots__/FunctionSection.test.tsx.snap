@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FunctionSection component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-gsTCUz jOXVUR"
+  >
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ eCqVEX"
+      >
+        AC
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ eCqVEX"
+      >
+        +/-
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ eCqVEX"
+      >
+        %
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

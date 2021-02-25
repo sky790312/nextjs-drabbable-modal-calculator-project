@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { initializeStore } from '@/store/index'
 import { RootState } from '@/store/index'
 import { theme } from '@/GlobalStyles'
+import { AppProvider } from '@/components/appCommon/AppContext'
 
 export function withProviders(
   component,
@@ -11,9 +12,11 @@ export function withProviders(
 ): JSX.Element {
   const mockStore = initializeStore(initialState)
   return (
-    <Provider store={mockStore}>
-      <ThemeProvider theme={theme}>{component}</ThemeProvider>
-    </Provider>
+    <AppProvider deviceInfo={'pc'}>
+      <Provider store={mockStore}>
+        <ThemeProvider theme={theme}>{component}</ThemeProvider>
+      </Provider>
+    </AppProvider>
   )
 }
 

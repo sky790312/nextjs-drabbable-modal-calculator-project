@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalculateSection component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-jSgupP bGcrcl"
+  >
+    <div
+      class="sc-eCssSg kmQVxi"
+    >
+      0
+    </div>
+    <div
+      class="sc-gKsewC kWuRIb"
+    >
+      <div>
+        <div
+          class="sc-gsTCUz jOXVUR"
+        >
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ eCqVEX"
+            >
+              AC
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ eCqVEX"
+            >
+              +/-
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ eCqVEX"
+            >
+              %
+            </button>
+          </div>
+        </div>
+        <div
+          class="sc-dlfnbm khiWLq"
+        >
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV x2"
+          >
+            <button
+              class="sc-bdfBwQ kKwrzF"
+            >
+              0
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ fEHsxV"
+            >
+              ●
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ fEHsxV"
+            >
+              1
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ fEHsxV"
+            >
+              2
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ fEHsxV"
+            >
+              3
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ fEHsxV"
+            >
+              4
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ fEHsxV"
+            >
+              5
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ fEHsxV"
+            >
+              6
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ fEHsxV"
+            >
+              7
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ fEHsxV"
+            >
+              8
+            </button>
+          </div>
+          <div
+            class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+          >
+            <button
+              class="sc-bdfBwQ fEHsxV"
+            >
+              9
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-hKgILt jWckIG"
+      >
+        <div
+          class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+        >
+          <button
+            class="sc-bdfBwQ cOHXmb"
+          >
+            ÷
+          </button>
+        </div>
+        <div
+          class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+        >
+          <button
+            class="sc-bdfBwQ cOHXmb"
+          >
+            x
+          </button>
+        </div>
+        <div
+          class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+        >
+          <button
+            class="sc-bdfBwQ cOHXmb"
+          >
+            -
+          </button>
+        </div>
+        <div
+          class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+        >
+          <button
+            class="sc-bdfBwQ cOHXmb"
+          >
+            +
+          </button>
+        </div>
+        <div
+          class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+        >
+          <button
+            class="sc-bdfBwQ cOHXmb"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

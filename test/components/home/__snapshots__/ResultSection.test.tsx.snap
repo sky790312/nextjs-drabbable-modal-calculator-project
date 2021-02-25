@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultSection component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdfBwQ bClrVw"
+  >
+    0
+  </div>
+</DocumentFragment>
+`;

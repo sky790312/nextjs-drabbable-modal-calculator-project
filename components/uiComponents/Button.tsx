@@ -3,7 +3,7 @@ import styled from 'styled-components/'
 
 interface Props extends StyledButtonProps {
   children: ReactNode
-  onClick: () => void
+  onClick?: () => void
 }
 
 type StyledButtonProps = {

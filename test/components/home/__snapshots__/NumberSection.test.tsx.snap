@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumberSection component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-gsTCUz dWOGLZ"
+  >
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV x2"
+    >
+      <button
+        class="sc-bdfBwQ kKwrzF"
+      >
+        0
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ fEHsxV"
+      >
+        ●
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ fEHsxV"
+      >
+        1
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ fEHsxV"
+      >
+        2
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ fEHsxV"
+      >
+        3
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ fEHsxV"
+      >
+        4
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ fEHsxV"
+      >
+        5
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ fEHsxV"
+      >
+        6
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ fEHsxV"
+      >
+        7
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ fEHsxV"
+      >
+        8
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ fEHsxV"
+      >
+        9
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

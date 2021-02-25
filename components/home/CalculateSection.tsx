@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components/'
-import { FunctionSection } from '@/components/FunctionSection'
-import { NumberSection } from '@/components/NumberSection'
-import { OperationSection } from '@/components/OperationSection'
-import { ResultSection } from '@/components/ResultSection'
+import { FunctionSection } from '@/components/home/FunctionSection'
+import { NumberSection } from '@/components/home/NumberSection'
+import { OperationSection } from '@/components/home/OperationSection'
+import { ResultSection } from '@/components/home/ResultSection'
 import { AppContext } from '@/components/appCommon/AppContext'
 
 export const CalculateSection: React.FC = () => {

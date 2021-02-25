@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OperationSection component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-gsTCUz cEbJPn"
+  >
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ cOHXmb"
+      >
+        ÷
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ cOHXmb"
+      >
+        x
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ cOHXmb"
+      >
+        -
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ cOHXmb"
+      >
+        +
+      </button>
+    </div>
+    <div
+      class="GlobalStyles__FlexCenterContainer-sc-1m5drgn-0 cmgQYV"
+    >
+      <button
+        class="sc-bdfBwQ cOHXmb"
+      >
+        =
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

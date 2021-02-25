@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react'
 import Head from 'next/head'
 import { Container } from '@/GlobalStyles'
-import { Modal } from '@/components/Modal'
-import { CalculateSection } from '@/components/CalculateSection'
+import { Modal } from '@/components/uiComponents/Modal'
+import { CalculateSection } from '@/components/home/CalculateSection'
 import { AppContext } from '@/components/appCommon/AppContext'
 
 export const Home = React.memo(

@@ -11,7 +11,7 @@ interface Props extends StyledModalProps {
 }
 
 type StyledModalProps = {
-  view: 'pc' | 'mobile'
+  view?: 'pc' | 'mobile'
 }
 
 const defaultStyle: StyledModalProps = {
