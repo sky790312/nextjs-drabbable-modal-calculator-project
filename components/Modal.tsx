@@ -32,7 +32,7 @@ export const Modal: React.FC<Props> = ({
     document.body.style.overflow = isShow ? 'hidden' : bodyOverflow.current
   }, [isShow])
 
-  const handleCloseModal = (event: HTMLDivElement) => {
+  const handleCloseModal = (event: {target: EventTarget, currentTarget: EventTarget}) => {
     if (event.target === event.currentTarget) {
       closeModal()
     }
