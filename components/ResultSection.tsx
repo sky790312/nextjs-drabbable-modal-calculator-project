@@ -7,11 +7,13 @@ import { addCommasString } from '@/utils'
 export const ResultSection: React.FC = () => {
   const displayValue = useSelector(
     (state: RootState) => state.calculator.displayValue,
-    shallowEqual
+    shallowEqual,
   )
 
   return (
-    <ResultSectionContainer>{addCommasString(displayValue)}</ResultSectionContainer>
+    <ResultSectionContainer>
+      {addCommasString(displayValue)}
+    </ResultSectionContainer>
   )
 }
 

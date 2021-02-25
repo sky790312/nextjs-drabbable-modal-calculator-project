@@ -11,19 +11,19 @@ import { NUMBERS } from '@/constants'
 export const NumberSection: React.FC = React.memo(() => {
   const displayValue = useSelector(
     (state: RootState) => state.calculator.displayValue,
-    shallowEqual
+    shallowEqual,
   )
   const operator = useSelector(
     (state: RootState) => state.calculator.operator,
-    shallowEqual
+    shallowEqual,
   )
 
   const dispatch: Dispatch = useDispatch()
   const { setOperator, setDisplayValue } = calculatorActions
 
   const numberHandler = {
-    'num': (num: number) => handleNumber(num),
-    'dot': () => handleDot(),
+    num: (num: number) => handleNumber(num),
+    dot: () => handleDot(),
   }
 
   const handleNumber = (num: number) => {
@@ -32,13 +32,16 @@ export const NumberSection: React.FC = React.memo(() => {
       dispatch(setDisplayValue(numString))
       dispatch(setOperator(''))
     } else {
-      const newDisplayValue = displayValue === initialState.displayValue ? numString : `${displayValue}${numString}`
+      const newDisplayValue =
+        displayValue === initialState.displayValue
+          ? numString
+          : `${displayValue}${numString}`
       dispatch(setDisplayValue(newDisplayValue))
     }
   }
 
   const handleDot = () => {
-    if ((/\./).test(displayValue)) {
+    if (/\./.test(displayValue)) {
       return
     }
 
@@ -51,7 +54,11 @@ export const NumberSection: React.FC = React.memo(() => {
         <FlexCenterContainer key={num} className={!num && 'x2'}>
           <Button
             buttonStyle={'darkGray'}
-            onClick={() => isNaN(Number(num)) ? numberHandler['dot']() : numberHandler['num'](Number(num))}
+            onClick={() =>
+              isNaN(Number(num))
+                ? numberHandler['dot']()
+                : numberHandler['num'](Number(num))
+            }
             size={!num ? 'block' : 'md'}
           >
             {num}

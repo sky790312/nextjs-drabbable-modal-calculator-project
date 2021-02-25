@@ -2,34 +2,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/pages/*": [
-        "pages/*"
-      ],
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/store/*": [
-        "store/*"
-      ],
-      "@/test/*": [
-        "test/*"
-      ],
-      "@/constants": [
-        "constants.ts"
-      ],
-      "@/utils": [
-        "utils.ts"
-      ],
-      "@/GlobalStyles": [
-        "GlobalStyles.ts"
-      ]
+      "@/pages/*": ["pages/*"],
+      "@/components/*": ["components/*"],
+      "@/store/*": ["store/*"],
+      "@/test/*": ["test/*"],
+      "@/constants": ["constants.ts"],
+      "@/utils": ["utils.ts"],
+      "@/GlobalStyles": ["GlobalStyles.ts"]
     },
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -42,15 +24,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "exclude": [
-    "node_modules",
-    ".next",
-    "out"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js"
-  ]
+  "exclude": ["node_modules", ".next", "out"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]
 }

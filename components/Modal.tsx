@@ -6,7 +6,7 @@ const isClient = () => typeof window !== 'undefined'
 
 interface Props extends StyledModalProps {
   children: ReactNode
-  isShow: Boolean
+  isShow: boolean
   closeModal: () => void
 }
 
@@ -15,74 +15,87 @@ type StyledModalProps = {
 }
 
 const defaultStyle: StyledModalProps = {
-  view: 'pc'
+  view: 'pc',
 }
 
-export const Modal: React.FC<Props> = ({ children, isShow = false, view = defaultStyle.view, closeModal }) => {
-  const bodyOverflow = useRef<string>((isClient() && window.getComputedStyle(document.body).overflow) ?? '');
+export const Modal: React.FC<Props> = ({
+  children,
+  isShow = false,
+  view = defaultStyle.view,
+  closeModal,
+}) => {
+  const bodyOverflow = useRef<string>(
+    (isClient() && window.getComputedStyle(document.body).overflow) ?? '',
+  )
 
   useEffect(() => {
-    document.body.style.overflow = isShow ? 'hidden' : bodyOverflow.current;
-  }, [isShow]);
+    document.body.style.overflow = isShow ? 'hidden' : bodyOverflow.current
+  }, [isShow])
 
-  const handleCloseModal = event => {
+  const handleCloseModal = (event: HTMLDivElement) => {
     if (event.target === event.currentTarget) {
-      closeModal();
+      closeModal()
     }
   }
 
-  const modalContentRef = useRef(null);
-  const [mouseDown, setMouseDown] = useState<boolean>(false);
-
-  const handleDrag = (movementX, movementY) => {
-    const draggableContent = modalContentRef.current;
-    if (!draggableContent) {
-      return;
-    }
-
-    const { x, y } = draggableContent.getBoundingClientRect();
-
-    draggableContent.style.left = `${x + movementX}px`;
-    draggableContent.style.top = `${y + movementY}px`;
-  };
-
+  const modalContentRef = useRef(null)
+  const [mouseDown, setMouseDown] = useState<boolean>(false)
 
   useEffect(() => {
-    const handleMouseUp = () => setMouseDown(false);
+    const handleMouseUp = () => setMouseDown(false)
 
-    window.addEventListener('mouseup', handleMouseUp);
+    window.addEventListener('mouseup', handleMouseUp)
 
     return () => {
-      window.addEventListener('mouseup', handleMouseUp);
-    };
-  }, []);
+      window.addEventListener('mouseup', handleMouseUp)
+    }
+  }, [])
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => handleDrag(e.movementX, e.movementY);
+    const handleDrag = (movementX: number, movementY: number) => {
+      const draggableContent = modalContentRef.current
+      if (!draggableContent) {
+        return
+      }
+
+      const { x, y } = draggableContent.getBoundingClientRect()
+
+      draggableContent.style.left = `${x + movementX}px`
+      draggableContent.style.top = `${y + movementY}px`
+    }
+
+    const handleMouseMove = (e: MouseEvent) =>
+      handleDrag(e.movementX, e.movementY)
 
     if (mouseDown) {
-      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mousemove', handleMouseMove)
     }
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, [mouseDown, handleDrag]);
+      window.removeEventListener('mousemove', handleMouseMove)
+    }
+  }, [mouseDown])
 
-  const handleMouseDown = () => setMouseDown(true);
+  const handleMouseDown = () => setMouseDown(true)
 
-  const modal = isClient() && createPortal(
-    <StyledModal onClick={handleCloseModal}>
-      <StyledModalInner view={view} ref={modalContentRef} onMouseDown={handleMouseDown}>
-        <CloseBtn onClick={handleCloseModal}>x</CloseBtn>
-        <div>{children}</div>
-      </StyledModalInner>
-    </StyledModal>,
-    document.body
-  );
+  const modal =
+    isClient() &&
+    createPortal(
+      <StyledModal onClick={handleCloseModal}>
+        <StyledModalInner
+          view={view}
+          ref={modalContentRef}
+          onMouseDown={handleMouseDown}
+        >
+          <CloseBtn onClick={handleCloseModal}>x</CloseBtn>
+          <div>{children}</div>
+        </StyledModalInner>
+      </StyledModal>,
+      document.body,
+    )
 
-  return <>{isShow && modal}</>;
-};
+  return <>{isShow && modal}</>
+}
 
 const StyledModal = styled.div`
   position: fixed;

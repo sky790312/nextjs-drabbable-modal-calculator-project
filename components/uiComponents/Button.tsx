@@ -13,12 +13,23 @@ type StyledButtonProps = {
 
 const defaultStyle: StyledButtonProps = {
   size: 'md',
-  buttonStyle: 'gray'
+  buttonStyle: 'gray',
 }
 
-export const Button: React.FC<Props> = React.memo(({ children, size = defaultStyle.size, buttonStyle = defaultStyle.buttonStyle, onClick }) => {
-  return <StyledButton buttonStyle={buttonStyle} size={size} onClick={onClick}>{children}</StyledButton>;
-});
+export const Button: React.FC<Props> = React.memo(
+  ({
+    children,
+    size = defaultStyle.size,
+    buttonStyle = defaultStyle.buttonStyle,
+    onClick,
+  }) => {
+    return (
+      <StyledButton buttonStyle={buttonStyle} size={size} onClick={onClick}>
+        {children}
+      </StyledButton>
+    )
+  },
+)
 
 const StyledButton = styled.button<StyledButtonProps>`
   border: none;

@@ -3,7 +3,7 @@ import { useStore } from '@/store/index'
 import { GlobalStyles, theme } from '@/GlobalStyles'
 import { ThemeProvider } from 'styled-components'
 import { isMobile } from '@/utils'
-import { AppProps } from 'next/app';
+import { AppProps } from 'next/app'
 import { AppProvider } from '@/components/appCommon/AppContext'
 
 interface Props extends AppProps {

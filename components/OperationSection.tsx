@@ -10,28 +10,28 @@ import { Button } from '@/components/uiComponents/Button'
 import { OPERATORS } from '@/constants'
 
 export const OperationSection: React.FC = React.memo(() => {
-  const [remainOperator, setRemainOperator] = useState<string>('');
+  const [remainOperator, setRemainOperator] = useState<string>('')
   const displayValue = useSelector(
     (state: RootState) => state.calculator.displayValue,
-    shallowEqual
+    shallowEqual,
   )
   const tempValue = useSelector(
     (state: RootState) => state.calculator.tempValue,
-    shallowEqual
+    shallowEqual,
   )
   const operator = useSelector(
     (state: RootState) => state.calculator.operator,
-    shallowEqual
+    shallowEqual,
   )
   const dispatch: Dispatch = useDispatch()
   const { setOperator, setTempValue, setDisplayValue } = calculatorActions
 
   const OperationsHandler = {
     '÷': (prevValue: number, nextValue: number) => prevValue / nextValue,
-    'x': (prevValue: number, nextValue: number) => prevValue * nextValue,
+    x: (prevValue: number, nextValue: number) => prevValue * nextValue,
     '+': (prevValue: number, nextValue: number) => prevValue + nextValue,
     '-': (prevValue: number, nextValue: number) => prevValue - nextValue,
-    '=': (prevValue: number, nextValue: number) => nextValue
+    '=': (prevValue: number, nextValue: number) => nextValue,
   }
 
   const handleOperator = (newOperator: string) => {
@@ -42,11 +42,15 @@ export const OperationSection: React.FC = React.memo(() => {
       return
     }
 
-    const usingOperator = remainOperator ?
-      remainOperator === newOperator
-        ? newOperator : remainOperator
+    const usingOperator = remainOperator
+      ? remainOperator === newOperator
+        ? newOperator
+        : remainOperator
       : newOperator
-    const newDisplayValue = (OperationsHandler[usingOperator](+tempValue, +displayValue)).toString()
+    const newDisplayValue = OperationsHandler[usingOperator](
+      +tempValue,
+      +displayValue,
+    ).toString()
     dispatch(setDisplayValue(newDisplayValue))
     dispatch(setTempValue(newDisplayValue))
     dispatch(setOperator(newOperator))
@@ -57,11 +61,15 @@ export const OperationSection: React.FC = React.memo(() => {
     <OperationSectionContainer>
       {OPERATORS.map(operation => (
         <FlexCenterContainer key={operation}>
-          <Button buttonStyle={'blue'} onClick={() => handleOperator(operation)}>{operation}</Button>
+          <Button
+            buttonStyle={'blue'}
+            onClick={() => handleOperator(operation)}
+          >
+            {operation}
+          </Button>
         </FlexCenterContainer>
       ))}
     </OperationSectionContainer>
-
   )
 })
 

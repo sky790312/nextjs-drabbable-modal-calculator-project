@@ -26,7 +26,10 @@ export const CalculateSection: React.FC = () => {
 
 const CalculateSectionContainer = styled.div<{ deviceInfo: 'pc' | 'mobile' }>`
   overflow: auto;
-  background-image: linear-gradient(${({ theme }) => theme.colors.lightBlue}, ${({ theme }) => theme.colors.darkBlue});
+  background-image: linear-gradient(
+    ${({ theme }) => theme.colors.lightBlue},
+    ${({ theme }) => theme.colors.darkBlue}
+  );
   height: 650px;
   border-radius: 5px;
 
@@ -52,7 +55,7 @@ const ManipulateSection = styled.div`
       width: 75%;
     }
 
-     &:nth-child(2) {
+    &:nth-child(2) {
       width: 25%;
     }
   }

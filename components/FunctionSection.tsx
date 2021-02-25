@@ -13,11 +13,11 @@ export const FunctionSection: React.FC = React.memo(() => {
   const { reset, setDisplayValue } = calculatorActions
   const displayValue = useSelector(
     (state: RootState) => state.calculator.displayValue,
-    shallowEqual
+    shallowEqual,
   )
 
   const numFunctionHandler = {
-    'AC': () => handleReset(),
+    AC: () => handleReset(),
     '+/-': () => handleToggleSign(),
     '%': () => handlePercent(),
   }
@@ -46,7 +46,9 @@ export const FunctionSection: React.FC = React.memo(() => {
     <FunctionSectionContainer>
       {NUM_FUNCTIONS.map(numFunction => (
         <FlexCenterContainer key={numFunction}>
-          <Button onClick={() => numFunctionHandler[numFunction]()}>{numFunction}</Button>
+          <Button onClick={() => numFunctionHandler[numFunction]()}>
+            {numFunction}
+          </Button>
         </FlexCenterContainer>
       ))}
     </FunctionSectionContainer>

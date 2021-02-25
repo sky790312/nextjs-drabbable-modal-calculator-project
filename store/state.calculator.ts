@@ -53,7 +53,7 @@ export const calculatorActions = {
 
 export const calculatorReducer = (
   state: CalculatorState = initialState,
-  action
+  action,
 ): CalculatorState => {
   switch (action.type) {
     case actionTypes.SET_DISPLAY_VALUE: {
@@ -77,7 +77,7 @@ export const calculatorReducer = (
     case actionTypes.RESET: {
       return {
         ...state,
-        ...initialState
+        ...initialState,
       }
     }
   }

@@ -13,10 +13,7 @@ interface AppProviderProps extends AppContextProps {
   children: ReactNode
 }
 
-export const AppProvider = ({
-  deviceInfo,
-  children,
-}: AppProviderProps) => {
+export const AppProvider = ({ deviceInfo, children }: AppProviderProps) => {
   return (
     <AppContext.Provider
       value={{

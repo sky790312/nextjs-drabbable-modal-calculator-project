@@ -9,20 +9,20 @@ export const Home = React.memo(
   (): JSX.Element => {
     const context = useContext(AppContext)
     const { deviceInfo } = context
-    const [isModalShow, setIsModalShow] = useState<Boolean>(false);
+    const [isModalShow, setIsModalShow] = useState<boolean>(false)
     const modalConfig = {
       isShow: isModalShow,
       closeModal: () => {
-        setIsModalShow(false);
+        setIsModalShow(false)
       },
-      view: deviceInfo
-    };
+      view: deviceInfo,
+    }
 
     return (
       <>
         <Head>
           <title>Create Next App</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel='icon' href='/favicon.ico' />
         </Head>
         <Container>
           <button onClick={() => setIsModalShow(true)}>open</button>
@@ -32,7 +32,7 @@ export const Home = React.memo(
         </Container>
       </>
     )
-  }
+  },
 )
 
 export default Home

@@ -7,7 +7,7 @@ import { theme } from '@/GlobalStyles'
 
 export function withProviders(
   component,
-  initialState?: RootState
+  initialState?: RootState,
 ): JSX.Element {
   const mockStore = initializeStore(initialState)
   return (
