@@ -4,13 +4,21 @@ import styled from 'styled-components/'
 
 const isClient = () => typeof window !== 'undefined'
 
-type Props = {
+interface Props extends StyledModalProps {
   children: ReactNode
   isShow: Boolean
   closeModal: () => void
 }
 
-export const Modal: React.FC<Props> = ({ children, isShow = false, closeModal }) => {
+type StyledModalProps = {
+  view: 'pc' | 'mobile'
+}
+
+const defaultStyle: StyledModalProps = {
+  view: 'pc'
+}
+
+export const Modal: React.FC<Props> = ({ children, isShow = false, view = defaultStyle.view, closeModal }) => {
   const bodyOverflow = useRef<string>((isClient() && window.getComputedStyle(document.body).overflow) ?? '');
 
   useEffect(() => {
@@ -23,11 +31,11 @@ export const Modal: React.FC<Props> = ({ children, isShow = false, closeModal })
     }
   }
 
-  const panelRef = useRef(null);
+  const modalContentRef = useRef(null);
   const [mouseDown, setMouseDown] = useState<boolean>(false);
 
   const handleDrag = (movementX, movementY) => {
-    const draggableContent = panelRef.current;
+    const draggableContent = modalContentRef.current;
     if (!draggableContent) {
       return;
     }
@@ -65,7 +73,7 @@ export const Modal: React.FC<Props> = ({ children, isShow = false, closeModal })
 
   const modal = isClient() && createPortal(
     <StyledModal onClick={handleCloseModal}>
-      <StyledModalInner ref={panelRef} onMouseDown={handleMouseDown}>
+      <StyledModalInner view={view} ref={modalContentRef} onMouseDown={handleMouseDown}>
         <CloseBtn onClick={handleCloseModal}>x</CloseBtn>
         <div>{children}</div>
       </StyledModalInner>
@@ -86,12 +94,27 @@ const StyledModal = styled.div`
   z-index: 99;
 `
 
-const StyledModalInner = styled.div`
+const StyledModalInner = styled.div<StyledModalProps>`
   position: absolute;
-  cursor: grab;
-  min-height: 200px;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
+
+  ${props => {
+    switch (props.view) {
+      case 'pc':
+        return `
+          min-height: 200px;
+          cursor: grab;
+        `
+      case 'mobile':
+        return `
+          bottom: 0;
+          width: 100%;
+          height: 50%;
+          overflow: auto;
+        `
+    }
+  }}
 `
 
 const CloseBtn = styled.div`
