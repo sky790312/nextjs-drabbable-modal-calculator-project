@@ -1,11 +1,18 @@
 /**
  *
- * @param numStr string
+ * @param num string | number
  *
  * add a number string with every 3 digit commas.
  */
-export const addCommasString = (numStr: string) => {
-  return numStr.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+export const addCommas = (num: string | number) => {
+  const numStr = String(num)
+  if (numStr.includes('.')) {
+    const [integer = '', decimal = ''] = numStr.split('.')
+    const newInteger = (+integer).toLocaleString()
+    return `${newInteger}.${decimal}`
+  } else {
+    return (+numStr).toLocaleString()
+  }
 }
 
 /**

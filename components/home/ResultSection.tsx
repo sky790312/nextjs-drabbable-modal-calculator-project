@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/'
 import { useSelector, shallowEqual } from 'react-redux'
 import { RootState } from '@/store/index'
-import { addCommasString } from '@/utils'
+import { addCommas } from '@/utils'
 
 export const ResultSection: React.FC = () => {
   const displayValue = useSelector(
@@ -12,7 +12,7 @@ export const ResultSection: React.FC = () => {
 
   return (
     <ResultSectionContainer>
-      {addCommasString(displayValue)}
+      {addCommas(displayValue)}
     </ResultSectionContainer>
   )
 }
