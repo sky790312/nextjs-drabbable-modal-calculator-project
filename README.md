@@ -6,6 +6,15 @@ a small sample project which contain all real project need. (with redux)
 
 check the package.json.
 
+## feature
+
+- detect device for mobile/pc to show different view.
+
+- pc view modal need RWD.
+
+- modal is draggable.
+
+- calculator implement.
 ## pending
 
 - use typescript for storybook.
