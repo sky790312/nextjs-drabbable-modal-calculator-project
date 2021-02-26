@@ -1,13 +1,15 @@
-# nextjs-typescript-redux-thunk-styled-component example project.
+# nextjs-drabbable-modal-calculator-project
 
-clone and start from https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest
+a small sample project which contain all real project need. (with redux)
 
-## How to use (check the package.json)
+## How to use
 
-```bash
-yarn // install dependency first.
+check the package.json.
 
-yarn dev // start and develop project.
-yarn test-all // check all project's test and can combine with CI/CD.
-yarn build // build project and deploy to anywhere.
-```
+## pending
+
+- use typescript for storybook.
+
+- add more unit test for ui component.
+
+- add more storybook story for ui component.
