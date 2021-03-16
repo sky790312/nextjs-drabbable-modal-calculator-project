@@ -4,6 +4,11 @@ a small sample project which contain all real project need. (with redux)
 
 ## How to use
 
+```
+yarn
+yarn dev
+```
+
 check the package.json.
 
 ## feature
